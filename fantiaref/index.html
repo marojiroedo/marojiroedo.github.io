@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p>You came from:</p>
-
-<p id="demo"></p>
+<!-- <p>You came from:</p>
+<p id="demo"></p> -->
   
-<div id="content"></div>
+<div id="content" style="width:100%"></div>
 
 <script>
-  document.getElementById("demo").innerHTML = document.referrer;
+//   document.getElementById("demo").innerHTML = document.referrer;
   if  (document.referrer.indexOf('fantia') !== -1){
-    linktodoc = '<iframe src="https://docs.google.com/document/d/e/2PACX-1vTQMnsxtAU_ri41-tIfhpkTOOB_4oEzjhMnVHrV_gujF51RZg3uJXPCx7LqjuDZXC4OXGiyMJI00atZ/pub?embedded=true"></iframe>';
-    document.getElementById("content").innerHTML = linktodoc;
+    linktodoc = '<iframe width = "100%" style="height:60vh" src="https://docs.google.com/document/d/1VzyyQOmTE5H6hFPipmRwu2nPcUOSa_H03Sll6yk5cOk/preview?usp=embed_googleplus"></iframe>';
+
+  }else{
+    linktodoc = 'Please click on the link from Fantia.<br>Fantiaからのリンクをクリックしてください。';
   }
+  document.getElementById("content").innerHTML = linktodoc;
 
 </script>
 
