@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>You came from:</p>
+
+<p id="demo"></p>
+  
+<div id="content"></div>
+
+<script>
+  document.getElementById("demo").innerHTML = document.referrer;
+  if  (document.referrer.indexOf('fantia') !== -1){
+    linktodoc = '<iframe src="https://docs.google.com/document/d/e/2PACX-1vTQMnsxtAU_ri41-tIfhpkTOOB_4oEzjhMnVHrV_gujF51RZg3uJXPCx7LqjuDZXC4OXGiyMJI00atZ/pub?embedded=true"></iframe>';
+    document.getElementById("content").innerHTML = linktodoc;
+  }
+
+</script>
+
+</body>
+</html>
