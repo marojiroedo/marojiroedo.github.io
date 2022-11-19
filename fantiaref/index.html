@@ -9,8 +9,15 @@
 <script>
 //   document.getElementById("demo").innerHTML = document.referrer;
   if  (document.referrer.indexOf('fantia') !== -1){
-    linktodoc = '<iframe width = "100%" style="height:60vh" src="https://docs.google.com/document/d/1VzyyQOmTE5H6hFPipmRwu2nPcUOSa_H03Sll6yk5cOk/preview?usp=embed_googleplus"></iframe>';
-
+    if(window.location.search.substring(1) == "discord"){
+        linktodoc = '<iframe width = "100%" style="height:97vh" src="https://docs.google.com/document/d/1VzyyQOmTE5H6hFPipmRwu2nPcUOSa_H03Sll6yk5cOk/preview?usp=embed_googleplus"></iframe>';
+    }else if(window.location.search.substring(1) == "uncen"){
+        linktodoc = '<iframe width = "100%" style="height:97vh" src="https://docs.google.com/document/d/16QmseEcUDJ6PLYOb9jFdqciCT0kJFbjlZ4x7gIsgWUo/preview?usp=embed_googleplus"></iframe>';
+    }else if (window.location.search.substring(1) == "sd"){
+        linktodoc = '<iframe width = "100%" style="height:97vh" src="https://docs.google.com/document/d/1COSs1B9sxoDbYzESszm5yCIkzXqhxE0bvtrafRtsggI/preview?usp=embed_googleplus"></iframe>';
+    }else{
+        linktodoc = 'The link is incorrect. Please contact us so we can correct it. <br> リンクが正しくありません。修正いたしますので、ご連絡ください。<br> <a href = "https://fantia.jp/marojiroedo">https://fantia.jp/marojiroedo</a> <br>';
+    }
   }else{
     linktodoc = 'Please click on the link from Fantia.<br>Fantiaからのリンクをクリックしてください。';
   }
